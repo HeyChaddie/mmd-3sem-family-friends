@@ -11,6 +11,7 @@ export default function details({ params }) {
 }
 
 async function FetchProduct({ params }) {
+  "use server";
   const { id } = await params;
   const response = await fetch(`https://dummyjson.com/products/${id}`);
   const product = await response.json();
